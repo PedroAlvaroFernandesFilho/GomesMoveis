@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomes | Móveis Personalizados</title>
+    <link rel="icon" type="image/png" href="Gomes_Favicon.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header id="header">
+        <div class="header-top">
+            <a href="#" class="logo-container">
+                <span class="logo-gomes">GOMES</span>
+                <span class="logo-sub">MÓVEIS PERSONALIZADOS</span>
+            </a>
+            <button class="menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+        <nav id="nav-menu">
+            <a href="#projetos">Projetos</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="projetos" class="section-padding bg-projetos">
+        <div class="container">
+            <h2 class="section-title">Nossos Projetos</h2>
+            
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                
+                <div class="carousel-track" id="track">
+                    <img src="cozinha.jpeg" alt="Cozinha" class="carousel-slide">
+                    <img src="cozinha2.jpeg" alt="Cozinha 2" class="carousel-slide">
+                    <img src="cozinha3.jpeg" alt="Cozinha 3" class="carousel-slide">
+                    <img src="cama.jpeg" alt="Cama" class="carousel-slide">
+                    <img src="distribuidora.jpeg" alt="Distribuidora" class="carousel-slide">
+                    <img src="pinga_fogo.jpeg" alt="Pinga Fogo" class="carousel-slide">
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div id="dots-container" class="carousel-dots"></div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-padding bg-sobre">
+        <div class="container grid-2">
+            <div class="about-text">
+                <h2 class="section-title" style="text-align: left;">Sobre Nós</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque? Ipsa, id et, fugit recusandae, exercitationem eius asperiores nihil culpa beatae deleniti perferendis ullam! Quia sed exercitationem ipsum rerum sint!</p>
+            </div>
+            <img src="escritorio.jpeg" alt="Sobre a Gomes Móveis" class="about-img reveal">
+        </div>
+    </section>
+
+    <section id="diferenciais" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Por que nos escolher?</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Acabamento Premium</h3>
+                    <p>Materiais de altíssima qualidade garantindo durabilidade e um visual impecável.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-ruler-combined"></i>
+                    <h3>Sob Medida</h3>
+                    <p>Móveis sob medida para se encaixar no seu espaço, seja ele qual for.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-couch"></i>
+                    <h3>Design Minimalista</h3>
+                    <p>Desingn único que se encaixa no seu ambiente, sem abrir mão da funcionalidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-padding bg-contato">
+        <div class="container grid-2">
+            <div class="contact-box">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Contato</h2>
+                <p>Inicie seu atendimento de forma rápida e direta pelos nossos canais.</p>
+                
+                <div>
+                    <a href="" class="btn-sobrio btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="" class="btn-sobrio btn-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d262.8303395558205!2d-51.91079996045446!3d-23.46119518958004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd163a01fd551%3A0xb3cd4c040ee44fa2!2sGomes%20M%C3%B3veis%20Personalizados!5e0!3m2!1spt-BR!2sbr!4v1775083219517!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="close-lightbox" id="close-btn">×</button>
+        <img src="" alt="Projeto" id="lightbox-img">
+    </div>
+
+    <footer>
+        <p>© 2026 Gomes Móveis Personalizados. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
