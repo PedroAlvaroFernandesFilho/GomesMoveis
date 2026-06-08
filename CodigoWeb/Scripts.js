@@ -1,8 +1,9 @@
-/* header script */
+// header flutuante script
 const header = document.getElementById('header');
 const menuBtn = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
 
+// Efeito de rolagem para o menu flutuante
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         header.classList.add('scrolled');
@@ -11,6 +12,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Menu Mobile
 menuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     const icon = menuBtn.querySelector('i');
@@ -18,14 +20,17 @@ menuBtn.addEventListener('click', () => {
     icon.classList.toggle('fa-times');
 });
 
+// Fechar menu ao clicar em um link
 document.querySelectorAll('#nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        menuBtn.querySelector('i').className = 'fas fa-bars';
+        if(window.innerWidth < 768) {
+            navMenu.classList.remove('active');
+            menuBtn.querySelector('i').className = 'fas fa-bars';
+        }
     });
 });
 
-/* carrossel script */
+// Carrossel script
 const track = document.getElementById('track');
 const dotsContainer = document.getElementById('dots-container');
 const prevBtn = document.getElementById('prevBtn');
@@ -36,7 +41,6 @@ if (track && dotsContainer) {
     let currentIndex = 0;
     let carouselTimer;
 
-    // Reseta e preenche os círculos indicadores baseados nas imagens reais
     dotsContainer.innerHTML = '';
     slides.forEach((_, index) => {
         const dot = document.createElement('div');
@@ -67,7 +71,6 @@ if (track && dotsContainer) {
         moveToSlide(currentIndex);
     }
 
-    // Configuração estável do timer de 10 segundos (10000ms)
     function resetTimer() {
         clearInterval(carouselTimer);
         carouselTimer = setInterval(nextSlide, 10000);
@@ -87,7 +90,6 @@ if (track && dotsContainer) {
         });
     }
 
-    // Sistema de arrastar e deslizar com o dedo (Mobile Touch)
     let startX = 0;
     let isDragging = false;
 
@@ -108,11 +110,10 @@ if (track && dotsContainer) {
         resetTimer();
     }, {passive: true});
 
-    // Inicia o contador automático
     resetTimer();
 }
 
-/* lightbox script */
+// Lightbox script
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeBtn = document.getElementById('close-btn');
@@ -132,7 +133,7 @@ if (track && lightbox) {
     });
 }
 
-/* scroll reveal animation script */
+// Scroll reveal animation
 const revealElements = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
